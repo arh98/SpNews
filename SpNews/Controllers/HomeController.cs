@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
 using SpNews.Models;
 using System;
@@ -22,7 +23,11 @@ namespace SpNews.Controllers
         {
             return View();
         }
-
+        [Route("ContactUs")]
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
