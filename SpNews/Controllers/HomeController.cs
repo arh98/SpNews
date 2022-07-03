@@ -29,7 +29,19 @@ namespace SpNews.Controllers
         }
         public IActionResult Detailed(int id)
         {
-            return null;
+            var news = _context.News.Find(id);
+            if (news == null)
+                return NotFound();
+            var categoriesOfNews = _context.News.Where(n => n.Id == id)
+                .SelectMany(c => c.CategoryToNews)
+                .Select(cat => cat.Category).ToList();
+            var dvm = new DetailedViewModel()
+            {
+                News = news,
+                Categories = categoriesOfNews
+            };
+            return View(dvm);
+             
         }
         [Route("ContactUs")]
         public IActionResult ContactUs()
