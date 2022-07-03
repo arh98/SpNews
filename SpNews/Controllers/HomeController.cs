@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
+using SpNews.Data;
 using SpNews.Models;
 using System;
 using System.Collections.Generic;
@@ -13,15 +14,22 @@ namespace SpNews.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private SpNewsContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger , SpNewsContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var newsItems = _context.News.ToList();
+            return View(newsItems);
+        }
+        public IActionResult Detailed(int id)
+        {
+            return null;
         }
         [Route("ContactUs")]
         public IActionResult ContactUs()
