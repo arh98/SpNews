@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SpNews.Data;
 
 namespace SpNews.Migrations
 {
     [DbContext(typeof(SpNewsContext))]
-    partial class SpNewsContextModelSnapshot : ModelSnapshot
+    [Migration("20220703144116_addMoreTables")]
+    partial class addMoreTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,38 +83,6 @@ namespace SpNews.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("CategoryToNews");
-
-                    b.HasData(
-                        new
-                        {
-                            NewsId = 1,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            NewsId = 2,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            NewsId = 3,
-                            CategoryId = 1
-                        },
-                        new
-                        {
-                            NewsId = 1,
-                            CategoryId = 3
-                        },
-                        new
-                        {
-                            NewsId = 2,
-                            CategoryId = 2
-                        },
-                        new
-                        {
-                            NewsId = 3,
-                            CategoryId = 3
-                        });
                 });
 
             modelBuilder.Entity("SpNews.Models.News", b =>
@@ -134,29 +104,6 @@ namespace SpNews.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("News");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Date = "2022-07-03",
-                            Description = "The 37-year-old feels the urge to win even more in the twilight of his career, but is understood to feel that may not be possible at Old Trafford next season. The 2021/22 campaign was the fifth in succession in which United failed to win a trophy.",
-                            Name = "Cristiano Ronaldo wants to leave Manchester United this summer"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Date = "2022-07-03",
-                            Description = "Chelsea's bid has at this point trumped Arsenal, who had an opening bid rejected but are expected to go back in with an improved offer. Chelsea are also in for Raheem Sterling with Manchester City expecting to field a bid for the England international after Thomas Tuchel engaged Sterling over how he would fit in at Stamford Bridge.",
-                            Name = "Chelsea transfer news and rumours: Summer transfer window 2022"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Date = "2022-07-03",
-                            Description = "Manchester City are expecting to field an opening offer from Chelsea for Raheem Sterling after Thomas Tuchel engaged the England international over how he'd fit in at Stamford Bridge.The forward heads a shortlist of the manager's attacking targets and enters the final year of his contract with the Premier League champions, who are grateful for his service and will not obstruct his desire for greater minutes and status elsewhere.",
-                            Name = "Man City transfer news and rumours: Summer transfer window 2022"
-                        });
                 });
 
             modelBuilder.Entity("SpNews.Models.CategoryToNews", b =>
