@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SpNews.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,12 @@ namespace SpNews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            #region DB_Context
+            services.AddDbContext<SpNewsContext>(options =>
+            {
+                options.UseSqlServer("Data Source =.;Initial Catalog =SpNews_DB; Integrated Security=true");
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
