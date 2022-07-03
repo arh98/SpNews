@@ -16,6 +16,9 @@ namespace SpNews.Data
         }
         // models that should create table for them in db
         public DbSet<Category> Categories { get; set; }
+        public DbSet<CategoryToNews> CategoryToNews{ get; set; }
+        public DbSet<News> News { get; set; }
+
         //seeding some default data to db
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
