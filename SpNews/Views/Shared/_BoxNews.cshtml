@@ -1,0 +1,11 @@
+﻿@model News
+
+<div class="col-4">
+    <div class="card">
+        <img src="" alt="News Photo" class="card-img-top img-thumbnail" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <a asp-action="Detailed" asp-controller="Home" asp-route-id="@Model.Id">Read More</a>
+        </div>
+    </div>
+</div>
