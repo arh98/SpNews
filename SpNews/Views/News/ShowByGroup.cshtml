@@ -1,0 +1,14 @@
+﻿@model IEnumerable<News>
+@{
+    ViewData["Title"] = ViewData["GroupName"];
+}
+
+<h1 class="text-center">@ViewData["GroupName"] News :</h1>
+<hr />
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <partial name="_BoxNews" model="@item" />
+    }
+</div>
+
