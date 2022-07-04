@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "Success Register";
+}
+
+<h3 class="text-center">Registration was successful</h3>
+<div class="alert alert-success text-center">
+    User '@Model.Email', Thank You For Registering, You Can Enter With Link Below
+    <p>
+        <a class="text-decoration-none"asp-controller="Account" asp-action="Login">Log In</a>
+    </p>
+</div>
