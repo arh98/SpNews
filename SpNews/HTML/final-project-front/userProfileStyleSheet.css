@@ -32,3 +32,27 @@
     z-index: 2;
     position: relative;
 }
+.profileBanner{
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbgAAAByCAMAAAAWEDTnAAAAFVBMVEUCOlACQVwCQFoCO1ICPVUCP1gCOlEuBiqoAAACrklEQVR4nOXd2VFFMQxEQfb8QyYBdiz1SO4Qjj7u4HpVPDys8Px4G138lBcdspsOfsyrLtlM9z7nSafspXMfpFP20rUPetMtW+naJ101LXXso26alrr1WRdNS536sHumpS59mu7ZRoc+Tgftojsfd8u01J3Pu2Ra6swF7piWunKFK6aljlxCR+2gG5e4YaDoxjUuGCg6cZH9l9OFq6wfKDpwGR22mu5bR5ctpvPWWT4tdd5CuweKrltp9duXjltq87TUbWvpuoV02mI6bx1dttjeaanLVls7LXXYclunpe5ab+m01Fkb7Lycrtpg50DRVTusvJyO2mLjtNRNeyycljppk30DRRftojsfp4O20aFP0z3bbBsoumefZZfTORvtGii6ZqdVl9MxW+nYJ+mWrTa9femWvRYNFJ2y2Z63L12y25qBokO223I53bGfLn6IzthvybTUGYEd01JXFFZ85nREYsPldENjweV0QmPBQNEJkfmX0wWV8dNSB2Smf+Z0P2f45XQ+SKf/H10Pmj1QdD1p9EDR8ajJl9PtrMEDRafD5l5Ol8Pm/usyXU4bOy11OG7qQNHdvKG/2NPZAswcKLpaAn2DP9HRIugj/IVuFmHitNTNMgycljpZiHnTUhdLoe/wazpYjGl/FOheMaYNFN0rx7CBonMFmTVQdK0koz5zOlaUSZfTrbLoa/yCTpVl0LTUqcLMmZa6VJox01KHijNloOhOeYZcTmcKpE/yM7pSoBnTUldKNGJa6kiRJkxL3SjTgIGiE4XSZ/meLpRK3+VbOlCq+GmpA8VKn5a6T67wgaLzBMu+nK6TTN/mSzpOsuiBouNESx4ouk224LcvnSZc7kDRZdLp+3xKh4mnD/QZ3SVe6rTUXfKFTkudZYDMaamrTBA5LXWUEfSRPvIOy7ZXn2Citg4AAAAASUVORK5CYII=");
+    height:200px;
+}
+
+.uploadBtn {
+    background-color: #06283D;
+    color: white;
+}
+
+.uploadBtn:hover {
+    color: black;
+    background-color: #6493cc;
+}
+
+.profBtn {
+    color: #06283D;
+    border: 1.5px solid #06283D;
+}
+
+.profBtn:hover {
+    color: white;
+    background-color: #06283D;
+}
