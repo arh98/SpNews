@@ -1,0 +1,21 @@
+footer {
+    background-color: #06283D;
+    color: #DFF6FF;
+}
+
+.footerLink {
+    color: #DFF6FF;
+    cursor: pointer;
+}
+.footerLink:hover {
+    color: #47B5FF;
+}
+
+.footerBtnLink {
+    color: #DFF6FF;
+    cursor: pointer;
+}
+
+.footerBtnLink:hover {
+    color: #06283D;
+}
