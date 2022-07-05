@@ -1,49 +1,49 @@
 .item1 {
     grid-area: i1;
-    background-image: url("https://www.w3schools.com/bootstrap5/la.jpg");
+    background-image: url("https://pbs.twimg.com/profile_banners/103519940/1648635048/1500x500");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     transition: transform 0.6s;
 }
 
 .item2 {
     grid-area: i2;
-    background-image: url("https://www.w3schools.com/bootstrap5/paris.jpg");
+    background-image: url("https://pbs.twimg.com/profile_banners/140070953/1577113794/1500x500");
     background-size: cover;
     background-position: center;
 }
 
 .item3 {
     grid-area: i3;
-    background-image: url("https://www.w3schools.com/w3images/photographer.jpg");
+    background-image: url("https://i.pinimg.com/originals/d2/2a/98/d22a98eb779b77b55f2ff1a16f5d0ac5.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .item4 {
     grid-area: i4;
-    background-image: url("https://www.w3schools.com/bootstrap5/sanfran.jpg");
+    background-image: url("https://media.istockphoto.com/photos/the-concept-of-fair-wrestling-picture-id1089652438?k=20&m=1089652438&s=612x612&w=0&h=YjHhqVKdrPbk4BiNylefkrrsGxGg4H5dRdQoObY1iS8=");
     background-size: cover;
     background-position: center;
 }
 
 .item5 {
     grid-area: i5;
-    background-image: url("https://www.w3schools.com/bootstrap5/ny.jpg");
+    background-image: url("https://wallpapercave.com/wp/wp1906291.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .item6 {
     grid-area: i6;
-    background-image: url("https://www.w3schools.com/bootstrap5/chicago.jpg");
+    background-image: url("https://img.asmedia.epimg.net/resizer/Z-igdw_wci8S4GVSPtYXfW9wDK8=/1952x1098/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/ZLKK7GOYGZOK5EBMDXJWXPTMVQ.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .item7 {
     grid-area: i7;
-    background-image: url("https://www.w3schools.com/bootstrap5/newyork.jpg");
+    background-image: url("https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
     background-size: cover;
     background-position: center;
 }
@@ -75,7 +75,8 @@
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
-    font-family: Courier;
+    font-family: Helvetica;
+    font-weight: bold;
 }
 
 .flip-card-inner {
@@ -100,7 +101,5 @@
 }
 
 .flip-card-back {
-    color: white;
-    -webkit-text-stroke: 1px black;
     transform: rotateY(180deg);
 }
