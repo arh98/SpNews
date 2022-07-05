@@ -84,3 +84,10 @@ a:link {
     border: 2px solid #06283D;
     color: #06283D;
 }
+
+.submenu {
+    background-color: #203f5b;
+}
+.dropdown-item {
+    color: white;
+}
