@@ -1,0 +1,36 @@
+﻿@page
+@model SpNews.Pages.Admin.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+<h3>Add News</h3>
+<hr />
+<form method="post" enctype="multipart/form-data">
+    <dl class="dl-horizontal">
+        <dd><label asp-for="ToAddNewsVM.Name"></label></dd>
+        <dt>
+            <input asp-for="ToAddNewsVM.Name" class="form-control" />
+            <span asp-validation-for="ToAddNewsVM.Name"></span>
+        </dt>
+        <dd><label asp-for="ToAddNewsVM.Description"></label></dd>
+        <dt>
+            <textarea asp-for="ToAddNewsVM.Description" class="form-control"></textarea>
+            <span asp-validation-for="ToAddNewsVM.Description"></span>
+        </dt>
+        <dd><label asp-for="ToAddNewsVM.Date"></label></dd>
+        <dt>
+            <input asp-for="ToAddNewsVM.Date" class="form-control" />
+            <span asp-validation-for="ToAddNewsVM.Date"></span>
+        </dt>
+        <dd><label asp-for="ToAddNewsVM.Picture"></label></dd>
+        <dt>
+            <input asp-for="ToAddNewsVM.Picture" />
+            <span asp-validation-for="ToAddNewsVM.Picture"></span>
+        </dt>
+        <dd></dd>
+        <dt>
+            <input type="submit" class="btn btn-success" value="Submit" />
+        </dt>
+    </dl>
+
+</form>

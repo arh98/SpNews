@@ -1,0 +1,37 @@
+﻿@page
+@model SpNews.Pages.Admin.IndexModel
+@{
+}
+<h3 class="">News List</h3>
+<hr />
+<p>
+    <a asp-page="Add" class="myButton">ADD POST</a>
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AllNews)
+        {
+            <tr>
+                <td>
+                    <img src="/images/@(item.Id).jpg" style="max-width: 200px; border: 1px solid gray;padding: 3px" />
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>@item.Date</td>
+                <td>
+                    <a asp-page="Edite" asp-route-id="@item.Id">Edite</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

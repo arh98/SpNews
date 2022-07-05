@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,7 @@ namespace SpNews
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddScoped<IUser, UserRepository>();
             #region DB_Context
             services.AddDbContext<SpNewsContext>(options =>
@@ -33,6 +35,13 @@ namespace SpNews
                 options.UseSqlServer("Data Source =.;Initial Catalog =SpNews_DB; Integrated Security=true");
             });
             #endregion
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(option =>
+                {
+                    option.LoginPath = "/Account/Login";
+                    option.LogoutPath = "/Account/Logout";
+                    option.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,11 +58,13 @@ namespace SpNews
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
