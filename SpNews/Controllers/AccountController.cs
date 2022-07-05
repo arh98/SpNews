@@ -54,9 +54,10 @@ namespace SpNews.Controllers
         [HttpPost]
         public IActionResult Login(LoginViewModel login)
         {
-            if (ModelState.IsValid)
+            /////////////////fix
+            if (!ModelState.IsValid)
             {
-                return View();
+                return View(login);
             }
             var user = _user.GetUserForLogin(login.Email, login.Password);
             if (user == null)
@@ -68,6 +69,7 @@ namespace SpNews.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Email),
+                new Claim("IsAdmin" ,user.IsAdmin.ToString())
 
             };
             var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
