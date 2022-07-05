@@ -1,0 +1,37 @@
+﻿@page
+@model SpNews.Pages.Admin.EditeModel
+@{
+    ViewData["Title"] = "Edite";
+}
+<h3>Edite News</h3>
+<hr />
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="ToEditeNewsVM.Id" />
+    <dl class="dl-horizontal">
+        <dd><label asp-for="ToEditeNewsVM.Name"></label></dd>
+        <dt>
+            <input asp-for="ToEditeNewsVM.Name" class="form-control" />
+            <span asp-validation-for="ToEditeNewsVM.Name"></span>
+        </dt>
+        <dd><label asp-for="ToEditeNewsVM.Description"></label></dd>
+        <dt>
+            <textarea asp-for="ToEditeNewsVM.Description" class="form-control"></textarea>
+            <span asp-validation-for="ToEditeNewsVM.Description"></span>
+        </dt>
+        <dd><label asp-for="ToEditeNewsVM.Date"></label></dd>
+        <dt>
+            <input asp-for="ToEditeNewsVM.Date" class="form-control" />
+            <span asp-validation-for="ToEditeNewsVM.Date"></span>
+        </dt>
+        <dd><label asp-for="ToEditeNewsVM.Picture"></label></dd>
+        <dt>
+            <input asp-for="ToEditeNewsVM.Picture" />
+            <span asp-validation-for="ToEditeNewsVM.Picture"></span>
+        </dt>
+        <dd></dd>
+        <dt>
+            <input type="submit" class="btn btn-success" value="Submit" />
+        </dt>
+    </dl>
+
+</form>

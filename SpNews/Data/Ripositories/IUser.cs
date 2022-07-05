@@ -10,6 +10,7 @@ namespace SpNews.Data.Ripositories
     {
         void AddUser(User user);
         bool IsExistUserEmail(string Email);
+        User GetUserForLogin(string email , string password);
     }
 
     public class UserRepository : IUser
@@ -29,6 +30,12 @@ namespace SpNews.Data.Ripositories
         {
             _context.Add(user);
             _context.SaveChanges();
+        }
+
+        public User GetUserForLogin(string email, string password)
+        {
+            return _context.Users
+                .SingleOrDefault(u => u.Email == email && u.Password == password);
         }
     }
 
