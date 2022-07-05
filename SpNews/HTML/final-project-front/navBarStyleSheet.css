@@ -58,3 +58,8 @@ a:link {
     color: white;
     background-color: #212529;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
