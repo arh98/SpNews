@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\footerStyleSheet.css" />
+    <Content Remove="wwwroot\css\homePageStyleSheet.css" />
     <Content Remove="wwwroot\css\navBarStyleSheet.css" />
+    <Content Remove="wwwroot\css\userProfileStyleSheet.css" />
+    <Content Remove="wwwroot\userProfile.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,10 +33,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\footerStyleSheet.css" />
+    <None Include="wwwroot\css\homePageStyleSheet.css" />
     <None Include="wwwroot\css\navBarStyleSheet.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <None Include="wwwroot\css\userProfileStyleSheet.css" />
+    <None Include="wwwroot\userProfile.html" />
   </ItemGroup>
 </Project>
