@@ -11,10 +11,10 @@
 <body>
     <header>
         <a href="/admin">Admin Panel</a>
-        <a href="/admin">Sign Out</a>
+        <a asp-controller="Account" asp-action="Logout">Sign Out</a>
     </header>
     <div class="row">
-        <div class=" cold-md-2">
+        <div class=" col-md-2">
             <nav>
                 <ul class="">
                     <li>
@@ -55,7 +55,7 @@
                 </ul>
             </nav>
         </div>
-        <div class="cold-md-10">
+        <div class="col-md-10">
             @RenderBody()
         </div>
     </div>
